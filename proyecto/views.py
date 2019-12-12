@@ -9,10 +9,6 @@ from datetime import datetime
 import time
 from django.conf import settings
 from io import BytesIO
-from reportlab.lib import colors
-from reportlab.lib.pagesizes import letter, inch
-from reportlab.pdfgen import canvas
-from reportlab.platypus import Table, TableStyle
 from django.views.generic import View
 from django.contrib.auth.models import User, Permission
 from django.contrib.auth.forms import UserCreationForm
