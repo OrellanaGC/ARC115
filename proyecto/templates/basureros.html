@@ -2,24 +2,209 @@
 {% load staticfiles %}
 {% block content%}
 
-<h2>B-121<!--Codigo del basurero {% object.codigo %}--></h2>
-<table>
+<h2>Sistema de gestión de desechos sólidos en hospitales</h2>
+<br><br>
+<button class="btn"><i class="fas fa-plus"></i> Nuevo</button><br><br>
+<div class="container">
+<table class="col-12 table">
 	<tbody>
-		<tr>
-			<td><img src="{% static '/img/trash.png' %}"></td>			
-		</tr>
-		<tr>
-			<td><b>Ubicación:</b></td>
-		</tr>
-		<tr>
-			<td><b>Estado: </b><button class="btn btn-success"> Activo</button> </td>
-		</tr>
-		<tr>
-			<td>
-				<button class="btn btn-primary"> Eliminar </button>
+		<tr class="row">
+						
+			<td class="col-2  align-items-center">
+				<div class="cajitaTrash">
+					<img class="mx-auto d-block" src=" {% static '/img/trash.png' %}">
+					<div  class="cajita">
+						<div style="text-align: center;">
+							<p><b>B-121</b></p>
+							<div class="btn-group" id="basurero1">
+							
+							<button id ="basurero2" class="btn btn-success"></button>
+							<button id="estado"></button>
+						</div>
+						</div>
+					</div>
+				</div>
 			</td>
+			<!--datos de prueba-->
+			<td class="col-2  align-items-center">
+				<div class="cajitaTrash">
+					<img class="mx-auto d-block" src=" {% static '/img/trash.png' %}">
+					<div  class="cajita">
+						<div style="text-align: center;">
+							<p><b>B-122</b></p>
+							<button class="btn btn-info"> Vacio</button>
+						</div>
+					</div>
+				</div>
+			</td>
+			<td class="col-2  align-items-center">
+				<div class="cajitaTrash">
+					<img class="mx-auto d-block" src=" {% static '/img/trash.png' %}">
+					<div  class="cajita">
+						<div style="text-align: center;">
+							<p><b>B-123</b></p>
+							<button class="btn btn-warning"> Lleno </button>
+						</div>
+					</div>
+				</div>
+			</td>
+			<td class="col-2  align-items-center">
+				<div class="cajitaTrash">
+					<img class="mx-auto d-block" src=" {% static '/img/trash.png' %}">
+					<div  class="cajita">
+						<div style="text-align: center;">
+							<p><b>B-124</b></p>
+							<button class="btn btn-success"> Activo </button>
+						</div>
+					</div>
+				</div>
+			</td>
+			<td class="col-2  align-items-center">
+				<div class="cajitaTrash">
+					<img class="mx-auto d-block" src=" {% static '/img/trash.png' %}">
+					<div  class="cajita">
+						<div style="text-align: center;">
+							<p><b>B-125</b></p>
+							<button class="btn btn-success"> Activo </button>
+						</div>
+					</div>
+				</div>
+			</td>
+			<td class="col-2  align-items-center">
+				<div class="cajitaTrash">
+					<img class="mx-auto d-block" src=" {% static '/img/trash.png' %}">
+					<div  class="cajita">
+						<div style="text-align: center;">
+							<p><b>B-126</b></p>
+							<button class="btn btn-success"> Activo </button>
+						</div>
+					</div>
+				</div>
+			</td>
+			<td class="col-2  align-items-center">
+				<div class="cajitaTrash">
+					<img class="mx-auto d-block" src=" {% static '/img/trash.png' %}">
+					<div  class="cajita">
+						<div style="text-align: center;">
+							<p><b>B-127</b></p>
+							<button class="btn btn-success"> Activo </button>
+						</div>
+					</div>
+				</div>
+			</td>
+			<td class="col-2  align-items-center">
+				<div class="cajitaTrash">
+					<img class="mx-auto d-block" src=" {% static '/img/trash.png' %}">
+					<div  class="cajita">
+						<div style="text-align: center;">
+							<p><b>B-128</b></p>
+							<button class="btn btn-success"> Activo </button>
+						</div>
+					</div>
+				</div>
+			</td>
+			<td class="col-2  align-items-center">
+				<div class="cajitaTrash">
+					<img class="mx-auto d-block" src=" {% static '/img/trash.png' %}">
+					<div  class="cajita">
+						<div style="text-align: center;">
+							<p><b>B-129</b></p>
+							<button class="btn btn-success"> Activo </button>
+						</div>
+					</div>
+				</div>
+			</td>
+			<td class="col-2  align-items-center">
+				<div class="cajitaTrash">
+					<img class="mx-auto d-block" src=" {% static '/img/trash.png' %}">
+					<div  class="cajita">
+						<div style="text-align: center;">
+							<p><b>B-130</b></p>
+							<button class="btn btn-success"> Activo </button>
+						</div>
+					</div>
+				</div>
+			</td>
+			<td class="col-2  align-items-center">
+				<div class="cajitaTrash">
+					<img class="mx-auto d-block" src=" {% static '/img/trash.png' %}">
+					<div  class="cajita">
+						<div style="text-align: center;">
+							<p><b>B-131</b></p>
+							<button class="btn btn-success"> Activo </button>
+						</div>
+					</div>
+				</div>
+			</td>
+			<td class="col-2  align-items-center">
+				<div class="cajitaTrash">
+					<img class="mx-auto d-block" src=" {% static '/img/trash.png' %}">
+					<div  class="cajita">
+						<div style="text-align: center;">
+							<p><b>B-132</b></p>
+							<button class="btn btn-success"> Activo </button>
+						</div>
+					</div>
+				</div>
+			</td>
+			<!--fin datos-->
 		</tr>
 	</tbody>
 </table>
+</div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-database.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+
+
+<script>
+  // Your web app's Firebase configuration
+  var config = {
+    apiKey: "AIzaSyBTsizvO3RPmLMBPt1SPWJBJrUQ1G8yn08",
+    authDomain: "arc-115.firebaseapp.com",
+    databaseURL: "https://arc-115.firebaseio.com",
+    projectId: "arc-115",
+    storageBucket: "arc-115.appspot.com",
+    messagingSenderId: "862866229603",
+    appId: "1:862866229603:web:6c6f241b56cd9dc5a32b56",
+    measurementId: "G-2ZTCDE2QN1"
+  };
+  	firebase.initializeApp(config);
+  // Initialize Firebase
+
+  	  function inicializarBase()
+  	  {
+  	  var database = firebase.database();
+	  var estado = document.getElementById('basurero2');
+	  var boton2= document.getElementById('estado');
+	  var mensajeRef = database.ref('distancia');
+	  mensajeRef.once('value').then(function(snap){
+	  	if(snap.val()<9){
+	  		estado.innerText= snap.val();
+	  		boton2.innerText='Lleno'
+	  	}
+	  	else{
+	  		estado.innerText= snap.val();
+	  		boton2.innerText='Vacio'
+	  	}
+
+	  })
+
+	  
+  	  }
+  	  setInterval('inicializarBase()',500);
+
+	  
+
+
+
+ 
+
+</script>
+
 
 {% endblock content %} 

@@ -265,33 +265,10 @@ a.article, a.article:hover {
         <ul  class="list-unstyled components">
             {% if request.user.is_authenticated %}
             <li>
-                        <a href="">Gestor de pacientes</a>
-                    </li>
+                <a href="{%url 'basureros'%}">Gestor Basureros</a>
+            </li>
+            <li>
 
-            <li>
-                <a href="">Gestor de aros</a>
-            </li>
-            <li>
-                <a href="">Gestor de lentes</a>
-            </li>
-            <li>
-                <a href="">Expedientes</a>
-            </li>
-            <li>
-                <a href="">Facturas lentes</a>
-            </li>
-            <li>
-                <a href=""> Registro Usuario</a>
-            </li>
-            
-            <li>
-                <a href="">Citas</a>
-            </li>
-            <li>
-                <a href="">Google calendar</a>
-            </li>
-
-            <li>
                 <a href="{%url 'logout' %}">Cerrar sesión</a>
             </li>
 
@@ -351,6 +328,7 @@ a.article, a.article:hover {
             });
         });
     </script>
+
     
     {% endblock Navegacion %}
 
