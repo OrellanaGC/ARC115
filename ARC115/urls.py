@@ -25,5 +25,5 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(template_name = 'index.html'), name = 'logout'),
     url(r'^inicio/', inicio, name='inicio'),
     url(r'^basureros/', basureros, name='basureros'),
-    url(r'^', principal, name='principal'),
+    url(r'^', BasureroList.as_view(), name='principal'),
 ]

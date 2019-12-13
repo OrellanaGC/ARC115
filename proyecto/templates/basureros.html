@@ -1,9 +1,25 @@
 {% extends "base.html" %}
-
+{% load staticfiles %}
 {% block content%}
 
-<h1>Aqui ira la interfaz mamalona de los basureros</h1>
-<h1><---- El navbar mamalon</h1>
-
+<h2>B-121<!--Codigo del basurero {% object.codigo %}--></h2>
+<table>
+	<tbody>
+		<tr>
+			<td><img src="{% static '/img/trash.png' %}"></td>			
+		</tr>
+		<tr>
+			<td><b>Ubicación:</b></td>
+		</tr>
+		<tr>
+			<td><b>Estado: </b><button class="btn btn-success"> Activo</button> </td>
+		</tr>
+		<tr>
+			<td>
+				<button class="btn btn-primary"> Eliminar </button>
+			</td>
+		</tr>
+	</tbody>
+</table>
 
 {% endblock content %} 

@@ -13,11 +13,18 @@ from django.views.generic import View
 from django.contrib.auth.models import User, Permission
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic import CreateView
+from django.views.generic.list import ListView
 from django.urls import reverse_lazy
+
+from proyecto.models import Basurero
 # Create your views here.
 
-def principal(request):
-	return render(request, 'principal.html')
+#Donde salen todos los basureros
+#def principal(request):
+#	return render(request, 'principal.html')
+class BasureroList(ListView):
+	model=Basurero
+	template_name='principal.html'
 
 def Base(request):
     return render(request, 'base.html')

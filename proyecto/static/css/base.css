@@ -222,3 +222,7 @@ a.article, a.article:hover {
     }
 
 }
+.cajitaTrash{
+   max-width: 150px;
+   max-height: 200px;  
+}
