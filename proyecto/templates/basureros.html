@@ -4,7 +4,6 @@
 
 <h2>Sistema de gestión de desechos sólidos en hospitales</h2>
 <br><br>
-<button class="btn"><i class="fas fa-plus"></i> Nuevo</button><br><br>
 <div class="container">
 <table class="col-12 table">
 	<tbody>
@@ -12,14 +11,12 @@
 						
 			<td class="col-2  align-items-center">
 				<div class="cajitaTrash">
-					<img class="mx-auto d-block" src=" {% static '/img/trash.png' %}">
+					<img title="Segunda planta emergencias"class="mx-auto d-block" src=" {% static '/img/trash.png' %}">
 					<div  class="cajita">
 						<div style="text-align: center;">
 							<p><b>B-121</b></p>
-							<div class="btn-group" id="basurero1">
-							
-							<button id ="basurero2" class="btn btn-success"></button>
-							<button id="estado"></button>
+							<div class="btn-group" id="basurero1">							
+							<button onclick="enProceso()" id="estado"></button>
 						</div>
 						</div>
 					</div>
@@ -179,17 +176,19 @@
   	  function inicializarBase()
   	  {
   	  var database = firebase.database();
-	  var estado = document.getElementById('basurero2');
-	  var boton2= document.getElementById('estado');
+	  //var estado = document.getElementById('basurero2');
+	  var boton1= document.getElementById('estado');
 	  var mensajeRef = database.ref('distancia');
 	  mensajeRef.once('value').then(function(snap){
-	  	if(snap.val()<9){
-	  		estado.innerText= snap.val();
-	  		boton2.innerText='Lleno'
+	  	if(snap.val()<9 && boton1.innerText!='En Proceso'){
+	  		//estado.innerText= snap.val();
+	  		boton1.innerText='Lleno';
+	  		boton1.className='btn btn-danger';
 	  	}
-	  	else{
-	  		estado.innerText= snap.val();
-	  		boton2.innerText='Vacio'
+	  	if(snap.val()>9){
+	  		//estado.innerText= snap.val();
+	  		boton1.innerText='Activo';
+	  		boton1.className='btn btn-success';
 	  	}
 
 	  })
@@ -198,7 +197,14 @@
   	  }
   	  setInterval('inicializarBase()',500);
 
-	  
+	  function enProceso()
+	  {
+	  	var boton= document.getElementById('estado');
+	  	boton.addEventListener('click',function(){
+	  		boton.innerText='En Proceso';
+	  		boton.className= 'btn btn-warning';
+	  	})
+	  }
 
 
 
